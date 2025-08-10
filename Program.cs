@@ -60,7 +60,7 @@ void StartCardGame()
     {
         PlayCard currentCard = deck[i];
         pile.Add(currentCard);
-        Console.WriteLine($"Played: {currentCard}");
+        Console.WriteLine($"Card played: {currentCard}");
 
         if (pile.Count >= 2)
         {
@@ -69,6 +69,7 @@ void StartCardGame()
             {
                 // Randomly choose player who wins this Snap
                 int winner = rng.Next(1, 3);
+
                 Console.WriteLine($"SNAP! Player {winner} wins {pile.Count} cards!");
                 if (winner == 1)
                     player1Score += pile.Count;
